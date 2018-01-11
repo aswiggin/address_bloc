@@ -1,5 +1,5 @@
 # connect to address_book to use variables
-require_relative '../models/address_book.rb'
+require_relative '../models/address_book'
 
 class MenuController
     attr_reader :address_book
