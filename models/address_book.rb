@@ -46,6 +46,10 @@
           end
           return nil
         end
+        
+        def delete_all
+          @entries = []
+        end
    end
    
 

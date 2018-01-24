@@ -142,5 +142,16 @@ RSpec.describe AddressBook do
        end
 
    end
+   
+   describe "#delete_all" do
+       it "delets all entries" do
+           book.add_entry("Ada Lovelace", "555-555-4858", "ada@blocmail.com")
+           book.add_entry("Ada Lovelace", "555-555-4858", "ada@blocmail.com")
+           book.add_entry("Ada Lovelace", "555-555-4858", "ada@blocmail.com")
+           
+           book.delete_all
+           expect(book.entries.size).to eq 0
+       end
+   end
 end
  

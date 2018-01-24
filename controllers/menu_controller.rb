@@ -13,7 +13,8 @@ class MenuController
         puts "2 - Create an entry"
         puts "3 - Search for an entry"
         puts "4 - Import entries from a CSV"
-        puts "5 - Exit"
+        puts "5 - Detonate all entries"
+        puts "6 - Exit"
         print "Enter your selection"
         
 # retrieve user input from the command line
@@ -37,8 +38,12 @@ class MenuController
                 system "clear"
                 read_CSV
                 main_menu
-            # end the program with no errors    
             when 5
+                system "clear"
+                delete_all
+                main_menu
+            # end the program with no errors    
+            when 6
                 puts "Good-bye!"
                 exit(0)
             #catches invalid user input
@@ -108,6 +113,7 @@ class MenuController
                 read_CSV
             end
         end
+
         def entry_submenu(entry)
             # displays submenu options
             puts "n - next entry"
